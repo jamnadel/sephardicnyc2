@@ -10,29 +10,3 @@ let map = new mapboxgl.Map({
     center: [-73.967925,40.772752],
     zoom: 10
 })
-
-let navigation = new mapboxgl.NavigationControl({
-    showCompass: false
-})
-map.addControl(navigation, 'top-left')
-
-let scale = new mapboxgl.ScaleControl({
-    maxWidth: 80,
-    unit: 'imperial'
-})
-map.addControl(scale, 'bottom-right')
-
-let geolocate = new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
-    },
-    trackUserLocation: true,
-    showUserLocation: true,
-    fitBoundsOptions: {
-    }
-})
-map.addControl(geolocate, 'top-left')
-
-geolocate.on('geolocate', function(event) {
-
-})
